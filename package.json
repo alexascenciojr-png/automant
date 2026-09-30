@@ -1,0 +1,29 @@
+{
+  "name": "automant",
+  "version": "1.0.0",
+  "description": "AutoMant: seguimiento de reparaciones con folio, roles y JWT",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --coverage"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^12.11.1",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": ["src/**/*.js", "!src/server.js"],
+    "coverageReporters": ["text", "lcov"],
+    "coverageThreshold": { "global": { "branches": 80, "functions": 80, "lines": 80, "statements": 80 } }
+  }
+}
